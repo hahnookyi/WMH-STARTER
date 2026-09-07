@@ -1,0 +1,89 @@
+<section class="view" id="v-checkout">
+  <div class="topbar">
+    <button class="back" data-go="v-hub" aria-label="Back">←</button>
+    <span class="eyebrow">체크아웃</span>
+  </div>
+  <div style="padding:6px 20px 0;">
+    <h1 class="display">떠나기 전에</h1>
+    <p class="sub" style="margin-top:14px;">머무신 자리를 가볍게 정돈해 주시면, 다음 손님도 같은 설렘으로 이 집을 만납니다.</p>
+  </div>
+
+  <!-- 퇴실 시각 요약 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 20px 4px;">
+    <div class="tt"><span class="tt-l">체크아웃</span><span class="tt-v">11:00</span><span class="tt-n">까지</span></div>
+    <div class="tt"><span class="tt-l">짐 보관</span><span class="tt-v">14:00</span><span class="tt-n">까지</span></div>
+  </div>
+  <p class="sub" style="margin:8px 20px 2px;font-size:var(--fs-sm);">항목을 눌러 자세히 보세요.</p>
+
+  <div id="checkout-accs">
+    <!-- ① 떠나기 전 정리 -->
+    <div class="dev">
+      <button class="dev-head">
+        <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>
+        <span class="dev-tt"><span class="dev-t">떠나기 전 정리</span><span class="dev-s">창문 · 설거지 · 수건</span></span>
+        <span class="dev-arrow">›</span>
+      </button>
+      <div class="dev-body">
+        <ul>
+          <li><span class="li-h">창문 닫기</span>냉난방을 끄고 창문을 닫아 주세요.</li>
+          <li><span class="li-h">설거지 · 비품 정리</span>사용하신 그릇은 가볍게 정리해 주시면 좋아요.</li>
+          <li><span class="li-h">사용한 수건</span>각 층 빨래 바구니에 넣어 주세요.</li>
+          <li><span class="li-h">개인 계정 로그아웃</span>넷플릭스·유튜브에 로그인하셨다면 로그아웃해 주세요.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ② 나가는 방법 -->
+    <div class="dev">
+      <button class="dev-head">
+        <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path></svg></span>
+        <span class="dev-tt"><span class="dev-t">나가는 방법</span><span class="dev-s">불 끄기 · 문단속</span></span>
+        <span class="dev-arrow">›</span>
+      </button>
+      <div class="dev-body">
+        <ul>
+          <li><span class="li-h">불 끄기</span>나가시기 전, 모든 조명을 꺼 주세요.</li>
+          <li><span class="li-h">현관문 · 대문</span>문은 자동으로 잠깁니다. 닫히는 것만 확인해 주세요.</li>
+          <li><span class="li-h">열쇠 반납</span>마스터 키를 쓰셨다면 우편함에 다시 넣어 주세요.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ③ 쓰레기 · 분리수거 -->
+    <div class="dev">
+      <button class="dev-head" data-go="v-waste">
+        <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path></svg></span>
+        <span class="dev-tt"><span class="dev-t">쓰레기 · 분리수거</span><span class="dev-s">버리는 방법 자세히 보기</span></span>
+        <span class="dev-arrow">›</span>
+      </button>
+    </div>
+
+    <!-- ④ 짐 보관 -->
+    <div class="dev">
+      <button class="dev-head">
+        <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M9 7V5a3 3 0 0 1 6 0v2"></path></svg></span>
+        <span class="dev-tt"><span class="dev-t">짐 보관</span><span class="dev-s">퇴실 후 오후 2시까지</span></span>
+        <span class="dev-arrow">›</span>
+      </button>
+      <div class="dev-body">
+        <ul>
+          <li><span class="li-h">보관 시간</span>퇴실 후 <b>오후 2시까지</b> 짐을 맡아 드립니다.</li>
+          <li><span class="li-h">미리 연락</span>맡기실 땐 호스트에게 먼저 문자 주세요.</li>
+        </ul>
+        <button class="host-cta" data-go="v-con" style="margin:2px 0 4px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-2.9-.38-4.1-1.05L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg>호스트에게 연락하기</button>
+      </div>
+    </div>
+
+    <!-- ⑤ 짐 배달 — 전용 화면으로 연결 (v15.4) -->
+    <div class="dev lugg-tile">
+      <button class="dev-head" data-go="v-lugg">
+        <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"></rect><path d="M6 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M16 11h3l3 4v3h-6"></path><circle cx="8" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle></svg></span>
+        <span class="dev-tt"><span class="dev-t">짐 배달</span><span class="dev-s">공항 · 다음 숙소로 당일 배송</span></span>
+        <span class="dev-arrow">›</span>
+      </button>
+    </div>
+  </div>
+
+  <p class="closing" style="margin:20px;">함께한 시간, 고맙습니다. 우리 또 만나요.</p>
+  <div style="height:24px"></div>
+</section>

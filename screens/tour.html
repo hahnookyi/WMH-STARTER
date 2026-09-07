@@ -1,0 +1,54 @@
+<section class="view" id="v-tour">
+  <div class="topbar">
+    <button class="back" data-go="v-disc" aria-label="Back">←</button>
+    <span class="eyebrow">둘러보기</span>
+  </div>
+  <div style="padding:6px 20px 4px;">
+    <h1 class="display">골목길 투어</h1>
+  </div>
+  <div class="glist dpage">
+    <div class="gsec">
+      <div class="gsec-body">
+        <p><span class="sent">걷는 순서까지 정해 둔 두 개의 길입니다.</span><span class="sent">코스 길이와 걸리는 시간을 적습니다 — 대문을 나서면 바로 시작됩니다.</span></p>
+        <div class="tour-toggle" id="tourToggle">
+          <button class="tchip on" data-course="A" type="button">A코스</button>
+          <button class="tchip" data-course="B" type="button">B코스</button>
+        </div>
+        <div id="tourmap"></div>
+        <p class="tour-note"><span class="sent">점선은 걷는 순서를 잇는 선입니다.</span><span class="sent">번호를 누르면 이름이 보입니다.</span></p>
+        <div class="dev">
+          <button class="dev-head">
+            <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c3-8 6-8 8-5s5 3 8-5"></path><circle cx="4" cy="19" r="1.4" fill="currentColor" stroke="none"></circle><circle cx="20" cy="9" r="1.4" fill="currentColor" stroke="none"></circle></svg></span>
+            <span class="dev-tt"><span class="dev-t">A코스 · 코스 이름</span><span class="dev-s">시작점 → 도착점 · 0km</span></span>
+            <span class="dev-arrow">›</span>
+          </button>
+          <div class="dev-body">
+            <ol>
+<li><span class="li-h">1번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">2번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">3번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">4번째 장소</span>한 줄 소개를 적습니다</li>
+            </ol>
+          </div>
+        </div>
+        <div class="dev">
+          <button class="dev-head">
+            <span class="dev-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4 4.5.6-3.2 3.1.7 4.5-4-2.1-4 2.1.7-4.5L5.5 7.6 10 7z"></path><path d="M12 15v6"></path></svg></span>
+            <span class="dev-tt"><span class="dev-t">B코스 · 코스 이름</span><span class="dev-s">시작점 → 도착점 · 0km</span></span>
+            <span class="dev-arrow">›</span>
+          </button>
+          <div class="dev-body">
+            <ol>
+<li><span class="li-h">1번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">2번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">3번째 장소</span>한 줄 소개를 적습니다</li>
+<li><span class="li-h">4번째 장소</span>한 줄 소개를 적습니다</li>
+            </ol>
+          </div>
+        </div>
+        <div class="dev-tip" style="margin-top:14px;">각 장소의 위치와 소개는 <b>둘러보기 지도</b>에서도 볼 수 있어요.</div>
+      </div>
+    </div>
+  </div>
+  <div style="height:24px"></div>
+</section>
