@@ -1,0 +1,168 @@
+<section class="view" id="v-hub">
+  <div class="topbar">
+    <button class="back" data-go="v-home" aria-label="Back">←</button>
+    <span class="eyebrow">스테이</span>
+  </div>
+  <div class="hub-head">
+    <h1 class="display" id="greet">좋은 저녁이에요</h1>
+    <p class="hub-line">
+      <span id="clock2">7월 27일 (월) · 22:28</span>
+      <span class="wx" id="wx" hidden></span>
+    </p>
+  </div>
+
+  <!-- 체크인 전 안내 배너 (v13.9) — JS가 daysToCheckin>0일 때만 표시 -->
+  <div class="checkin-note" id="checkin-note" hidden>
+    <div class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M7 3v4M17 3v4"></path><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M9 15l2 2 4-4"></path></svg></div>
+    <div class="ci-body">
+      <div class="ci-t"><span id="ci-when">체크인</span> · <b id="ci-time">15:00</b></div>
+      <div class="ci-s">15시부터 입실하실 수 있어요. 짐은 11시 30분부터 미리 맡기실 수 있습니다.</div>
+      <div class="ci-acts">
+        <button class="ci-link" data-go="v-checkin">도어락 · 오시는 길 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 퇴실 당일 안내 배너 (v13.3) — JS가 isCheckoutDay일 때만 표시 -->
+  <div class="checkout-note" id="checkout-note" hidden>
+    <div class="co-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path></svg></div>
+    <div class="co-body">
+      <div class="co-t">오늘 체크아웃 · <b id="co-time">11:00</b></div>
+      <div class="co-s">떠나기 전, 창문을 닫고 쓰레기를 정리해 주세요. 짐은 맡아 드릴 수 있어요.</div>
+      <button class="co-link" data-go="v-checkout">체크아웃 안내 보기 →</button>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <div class="tk-top">
+      <div class="tk-col">
+        <div class="tk-lab">CHECK-IN</div>
+        <div class="tk-big" id="tk-in-day">오늘</div>
+        <div class="tk-time" id="tk-in-time">16:00</div>
+      </div>
+      <div class="tk-mid"><div class="tk-nights" id="tk-nights">머무름</div></div>
+      <div class="tk-col right">
+        <div class="tk-lab">CHECK-OUT</div>
+        <div class="tk-big" id="tk-out-day">&nbsp;</div>
+        <div class="tk-time" id="tk-out-time">11:00</div>
+      </div>
+    </div>
+    <div class="tk-cut"></div>
+    <div class="tk-bottom">
+      <span class="tk-lab" id="tk-botlab">STAY</span>
+      <span class="tk-room" id="tk-room" data-house="stayType"></span>
+    </div>
+  </div>
+
+  <div class="quick">
+    <div class="q">
+      <div class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5a10.5 10.5 0 0 1 15 0"></path><path d="M8 16a6 6 0 0 1 8 0"></path><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"></circle></svg></div>
+      <div class="q-lab">WIFI</div>
+      <div class="q-val" id="wifi-ssid"></div>
+      <div class="q-val sub2" id="wifi-pw">welcome1234</div>
+    </div>
+    <div class="q">
+      <div class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5V12l3 1.8"></path></svg></div>
+      <div class="q-lab">CHECK-OUT</div>
+      <div class="q-val" id="q-out">11:00</div>
+      <div class="q-val sub2">까지</div>
+    </div>
+    <button class="q" data-go="v-con" style="border-left:1px solid var(--ink-06);">
+      <div class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5h16"></path><path d="M6 17a6 6 0 0 1 12 0"></path><path d="M12 8V6.2"></path><circle cx="12" cy="5" r="1.1" fill="currentColor" stroke="none"></circle></svg></div>
+      <div class="q-lab">HOST</div>
+      <div class="q-val">대화하기</div>
+      <div class="q-val sub2">카카오톡 · 전화</div>
+    </button>
+  </div>
+
+  <h2 class="sect">머무는 동안</h2>
+  <div class="grid">
+    <button class="g" data-go="v-guide" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5z"></path><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5A2.5 2.5 0 0 1 4 20.5z"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">이용 가이드</span>
+      <span class="g-s">체크인 · 주차 · 안전 수칙</span>
+    </button>
+    <button class="g" data-go="v-appl" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h3"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">전자기기 사용법</span>
+      <span class="g-s">집 안의 기기 사용법</span>
+    </button>
+    <button class="g" data-go="v-deliv" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"></circle><circle cx="18" cy="17" r="3"></circle><path d="M9 17h6M6 14l3-8h4l3 6"></path><path d="M13 6h4"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">음식 배달</span>
+      <span class="g-s">배민 · 쿠팡이츠 바로가기</span>
+    </button>
+    <button class="g" data-go="v-taxi" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"></path><path d="M4 11h16v6H4z"></path><path d="M7 17v2M17 17v2M9 5V3h6v2"></path><circle cx="7.5" cy="14" r="1" fill="currentColor" stroke="none"></circle><circle cx="16.5" cy="14" r="1" fill="currentColor" stroke="none"></circle></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">택시 · 밴</span>
+      <span class="g-s">카카오 T · Uber 호출</span>
+    </button>
+    <button class="g lugg-tile" data-go="v-lugg" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="11" rx="2"></rect><path d="M6 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M16 11h3l3 4v3h-6"></path><circle cx="8" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">짐 배달</span>
+      <span class="g-s">공항 · 다음 숙소로 당일 배송</span>
+    </button>
+    <button class="g" data-go="v-svc" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"></path><path d="M16 10h2a2 2 0 0 1 0 4h-2"></path><path d="M8 5c0-1 1-1 1-2M12 5c0-1 1-1 1-2"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">서비스</span>
+      <span class="g-s">다도 · 커피 · 아로마</span>
+    </button>
+    <button class="g" data-go="v-fac" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"></rect><path d="M9 8V6a3 3 0 0 1 6 0v2"></path><path d="M4 13h16"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">편의시설</span>
+      <span class="g-s">편의용품 · 생활용품 · 침구</span>
+    </button>
+    <button class="g" data-go="v-waste" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"></path><path d="M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13"></path><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path><path d="M10 11v7M14 11v7"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">쓰레기 · 분리수거</span>
+      <span class="g-s">일반 · 재활용 · 음식물</span>
+    </button>
+    <button class="g" data-go="v-laundry" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2"></rect><circle cx="12" cy="14" r="5"></circle><path d="M8 6h.01M11 6h.01"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">세탁</span>
+      <span class="g-s">보관 · 세탁기 · 건조기</span>
+    </button>
+    <button class="g" data-go="v-aid" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M12 11v5M9.5 13.5h5"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">구급상자</span>
+      <span class="g-s">상비약 · 증상별 안내</span>
+    </button>
+    <button class="g g-emerg" data-go="v-emergency" style="text-decoration:none;">
+      <span class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.4-3.2 7.9-8 9-4.8-1.1-8-4.6-8-9V7l8-4z"></path><path d="M12 8v4M12 15.5v.5"></path></svg></span>
+      <span class="g-out">→</span>
+      <span class="g-t">비상시 안내</span>
+      <span class="g-s">화재 · 긴급 연락 · 대처</span>
+    </button>
+
+  </div>
+
+  <h2 class="sect">대문 밖은</h2>
+  <button class="explore-band band-img" data-go="v-disc" style="background-image:url('img/story/neighborhood.jpg')">
+    <span class="band-shade"></span>
+    <span class="h3">둘러보기</span>
+    <span class="sub">우리 동네를 한 줄로 소개합니다</span>
+  </button>
+
+  <button class="explore-band band-img exp-band" data-go="v-exp" style="background-image:url('img/story/experience.jpg')">
+    <span class="band-shade"></span>
+    <span class="h3">체험하기</span>
+    <span class="sub">다니엘이 아는 사람들의 서울</span>
+  </button>
+
+  <button class="explore-band band-img" data-go="v-story" style="background-image:url('img/story/house-wide.jpg')">
+    <span class="band-shade"></span>
+    <span class="h3">이 집이 품은 비밀</span>
+    <span class="sub">이 집의 이야기를 한 줄로</span>
+  </button>
+  <div style="height:24px"></div>
+</section>

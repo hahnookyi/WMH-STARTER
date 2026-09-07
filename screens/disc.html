@@ -1,0 +1,37 @@
+<section class="view" id="v-disc">
+  <div class="topbar">
+    <button class="back" data-go="v-hub" aria-label="Back">←</button>
+    <span class="eyebrow">둘러보기</span>
+  </div>
+  <div style="padding:6px 20px 0;">
+    <h1 class="display">동네를<br>걷는 일</h1>
+    <p class="sub" style="margin-top:14px;max-width:34ch;">우리 동네를 소개하는 글을 여기에 적습니다.</p>
+  </div>
+  <div id="map"></div>
+  <div class="chips" id="chips">
+    <button class="chip chip-all on" data-cat="all">전체 · 0</button>
+    <button class="chip" data-cat="shop">장보기</button>
+    <button class="chip" data-cat="experience">체험</button>
+    <button class="chip" data-cat="see">볼거리</button>
+    <button class="chip" data-cat="drink">카페</button>
+    <button class="chip" data-cat="eat">식사</button>
+        <button class="trans-cta" data-go="v-tour" type="button">
+      <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="4" r="1.7"></circle><path d="M13 6.5L12 12"></path><path d="M12 12l3 3 .5 5"></path><path d="M12 12l-2.5 3.5L7 19"></path><path d="M13 7.5l3 2 2.5-.5"></path><path d="M13 7.5L10 9l-1.5 3"></path></svg></span>
+      <span class="tr-body">
+        <span class="tr-t">골목길 투어</span>
+        <span class="tr-s">걷는 순서를 정해 둔 길</span>
+      </span>
+      <span class="tc-arrow">→</span>
+    </button>
+    <button class="trans-cta" data-go="v-trans" type="button">
+      <span class="tr-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg></span>
+      <span class="tr-body">
+        <span class="tr-t">주요 관광지 가는 방법</span>
+        <span class="tr-s">경복궁부터 홍대까지 · 10곳</span>
+      </span>
+      <span class="tc-arrow">→</span>
+    </button>
+  </div>
+  <div class="list" id="spots" style="padding-top:0;"></div>
+  
+</section>

@@ -1,0 +1,209 @@
+<section class="view" id="v-trans">
+  <div class="topbar">
+    <button class="back" data-go="v-disc" aria-label="Back">←</button>
+    <span class="eyebrow">둘러보기</span>
+  </div>
+  <div style="padding:6px 20px 4px;">
+    <h1 class="display">주요 관광지<br>가는 방법</h1>
+    <p class="sub" style="margin-top:14px;max-width:36ch;">
+      모든 여정은 <b>가까운 정류장</b>에서 시작합니다. 버스를 타면 <b>가까운 지하철역</b>까지 데려다줍니다 — 약 10분.
+      
+      
+    </p>
+  </div>
+  <div style="padding:2px 20px 0;">
+    <div id="transmap"></div>
+    <p class="tour-note"><span class="sent">숙소 대문에서 정류장까지 도보 약 3분.</span><span class="sent">경복궁 방면은 숙소 쪽 정류장에서 승차하세요.</span></p>
+  </div>
+  <div class="ts-list">
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10c4-1.5 5-4 9-4s5 2.5 9 4"/><path d="M5 10v3M19 10v3M12 6v7"/><path d="M4 13h16"/><path d="M6 13v6M12 13v6M18 13v6"/><path d="M4 19h16"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">경복궁</span>
+        <span class="ts-r">버스 한 번 · 10분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">정류장에서 <b>7022 · 7212 · 1020</b> 아무 버스나 타세요</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>경복궁역</b> 하차 — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">내리면 바로 궁 서쪽 담장 · 정문(광화문)까지 도보 5분</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EA%B2%BD%EB%B3%B5%EA%B6%81" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11c3-1 4-3.5 8-3.5S17 10 20 11"/><path d="M6 11v8h12v-8"/><path d="M10 19v-5h4v5"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">인사동 · 북촌</span>
+        <span class="ts-r">버스 한 번 · 15분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">정류장에서 <b>7212</b> 승차</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>종로2가</b> 하차 — 15분</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">길 건너면 인사동길 입구 · 길 끝에서 북촌한옥마을 도보 7분</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EC%9D%B8%EC%82%AC%EB%8F%99" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l2-4h12l2 4"/><path d="M4 9c0 1.2 1 2 2 2s2-.8 2-2c0 1.2 1 2 2 2s2-.8 2-2c0 1.2 1 2 2 2s2-.8 2-2c0 1.2 1 2 2 2s2-.8 2-2"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">광장시장</span>
+        <span class="ts-r">버스 한 번 · 25분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">정류장에서 <b>7212</b> 승차</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>종로5가.광장시장</b> 하차 — 약 25분</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">횡단보도 하나만 건너면 시장 입구</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EA%B4%91%EC%9E%A5%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20c1-6 5-10 9-10s8 4 9 10"/><path d="M3 20h18"/><path d="M8 20c0-4 2-7 4-7s4 3 4 7"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">동대문 · DDP</span>
+        <span class="ts-r">버스 한 번 · 30분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">정류장에서 <b>7212</b> 승차</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>동대문역사문화공원</b> 하차 — 약 30분</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">DDP와 동대문 쇼핑몰이 바로 앞 · 한 정거장 전이 동대문종합시장</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1.2 12H7.2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">명동</span>
+        <span class="ts-r">환승 한 번 · 25분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> (오금 방면) → <b>충무로역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv"><b>4호선</b> 환승, 한 정거장 → <b>명동역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">4</span><span class="ts-sv">택시라면 20분</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EB%AA%85%EB%8F%99" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c4-1.2 5-3.5 9-3.5S17 7.8 21 9"/><path d="M5 9v11M19 9v11"/><path d="M3 20h18"/><path d="M9 20v-6a3 3 0 0 1 6 0v6"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">남대문시장</span>
+        <span class="ts-r">환승 한 번 · 25분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> → <b>충무로역</b>에서 <b>4호선</b> 환승</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">두 정거장 → <b>회현역</b> 하차</span></div>
+        <div class="ts-step"><span class="ts-sn">4</span><span class="ts-sv">5번 출구 앞이 바로 시장</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EB%82%A8%EB%8C%80%EB%AC%B8%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M9 6h6l-1.5 4h-3L9 6z"/><path d="M11 10l-1 10M13 10l1 10"/><path d="M8 20h8"/><path d="M4 20c2-3 4-4 4-4M20 20c-2-3-4-4-4-4"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">남산서울타워</span>
+        <span class="ts-r">명동에서 케이블카 · 40분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">위의 명동 경로 그대로 · 25분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv">명동역 <b>4번 출구</b> → 케이블카 승강장 도보 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv">케이블카 3분이면 타워 아래</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EB%82%A8%EC%82%B0%EC%84%9C%EC%9A%B8%ED%83%80%EC%9B%8C" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l4 2V9l4 2V9l4 2v9"/><path d="M4 20h16"/><path d="M18 13h2a2 2 0 0 1 0 4h-2"/><path d="M14 13h4v7"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">성수</span>
+        <span class="ts-r">환승 한 번 · 35분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> 세 정거장 → <b>을지로3가역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv"><b>2호선</b> (성수 방면) 환승 → <b>성수역</b> 하차</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EC%84%B1%EC%88%98%EB%8F%99%20%EC%B9%B4%ED%8E%98%EA%B1%B0%EB%A6%AC" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V8h6v12"/><path d="M11 20V4h8v16"/><path d="M3 20h18"/><path d="M14 7h2M14 10h2M14 13h2M7 11h2M7 14h2"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">강남 코엑스</span>
+        <span class="ts-r">환승 한 번 · 50분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> (오금 방면) → <b>교대역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv"><b>2호선</b> (잠실 방면) 환승, 네 정거장 → <b>삼성역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">4</span><span class="ts-sv">5·6번 출구가 코엑스와 바로 연결 · 택시라면 35분</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20L11 4h2l1 16"/><path d="M12 2v2"/><path d="M8 20h8"/><path d="M10.6 9h2.8M10.3 13h3.4"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">잠실 롯데월드타워</span>
+        <span class="ts-r">환승 한 번 · 45분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> 세 정거장 → <b>을지로3가역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv"><b>2호선</b> (잠실 방면) 환승 → <b>잠실역</b> 하차</span></div>
+        <div class="ts-step"><span class="ts-sn">4</span><span class="ts-sv">1·2번 출구가 타워 지하와 연결</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C%ED%83%80%EC%9B%8C" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+    <div class="ts-item">
+      <button class="ts-head" type="button" aria-expanded="false">
+      <span class="ts-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M9 17.5V5l10-2v12"/><path d="M19 15a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/></svg></span>
+      <span class="ts-body">
+        <span class="ts-t">홍대</span>
+        <span class="ts-r">환승 한 번 · 30분</span>
+      </span>
+      <span class="ts-more">▾</span>
+      </button>
+      <div class="ts-panel">
+        <div class="ts-step"><span class="ts-sn">1</span><span class="ts-sv">버스로 <b>경복궁역</b> — 10분</span></div>
+        <div class="ts-step"><span class="ts-sn">2</span><span class="ts-sv"><b>3호선</b> 세 정거장 → <b>을지로3가역</b></span></div>
+        <div class="ts-step"><span class="ts-sn">3</span><span class="ts-sv"><b>2호선</b> (시청 방면) 환승 → <b>홍대입구역</b> 하차</span></div>
+        <div class="ts-step"><span class="ts-sn">4</span><span class="ts-sv">9번 출구가 홍대 거리 한복판 · 택시라면 25분</span></div>
+        <div class="ts-link"><a class="spot-gmap kr" href="https://map.naver.com/p/search/%ED%99%8D%EB%8C%80%EC%9E%85%EA%B5%AC" target="_blank" rel="noopener">네이버 지도로 길찾기 ↗</a></div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:4px 20px 8px;">
+    <div class="gcall">
+      짐이 많거나 늦은 밤이라면 택시가 가장 편합니다. <b>호스트 화면의 택시 호출</b>을 이용해 주세요.
+      
+      
+    </div>
+  </div>
+  <div style="height:24px"></div>
+</section>
